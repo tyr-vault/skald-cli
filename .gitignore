@@ -15,3 +15,5 @@ venv/
 *.db
 .cursor/
 examples/sample-repo/.git/
+landing/node_modules/
+landing/dist/
