@@ -1,0 +1,32 @@
+# Learning note: {{ feature.title }}
+
+**Summary:** {{ feature.summary }}
+
+## What was built
+
+{% if feature.implementation_steps %}
+{% for step in feature.implementation_steps %}
+- {{ step.description }} (`{{ step.sources[0].commit_sha[:8] if step.sources and step.sources[0].commit_sha else "n/a" }}`)
+{% endfor %}
+{% else %}
+No implementation steps recorded.
+{% endif %}
+
+## Concepts
+
+{% if feature.technical_concepts %}
+{% for c in feature.technical_concepts %}
+- {{ c.name }}: {{ c.description or "" }}
+{% endfor %}
+{% else %}
+No concepts extracted.
+{% endif %}
+
+## Files to study
+
+{% for f in files[:15] %}
+- `{{ f }}`
+{% endfor %}
+
+---
+*Skald learning note — status {{ feature.status }}*

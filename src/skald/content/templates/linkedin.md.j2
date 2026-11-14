@@ -1,0 +1,11 @@
+I shipped: {{ feature.title }}
+
+{{ feature.summary }}
+
+{% if feature.technologies %}Tech: {{ feature.technologies | join(", ") }}{% endif %}
+
+{% if commits %}Commits: {% for c in commits %}{{ c.short }}{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}
+
+#engineering #buildinpublic
+
+*(Draft — Skald)*
