@@ -14,3 +14,4 @@ venv/
 .env
 *.db
 .cursor/
+sample-repo/.git/
