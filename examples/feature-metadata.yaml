@@ -1,0 +1,15 @@
+id: 00000000-0000-0000-0000-000000000000
+title: "feat: example feature from commits"
+summary: "Grouped commits implementing a documented capability."
+category: engineering
+technologies:
+  - Python
+confidence: 0.72
+status: discovered
+related_commits:
+  - abcd1234abcd1234abcd1234abcd1234abcd1234
+related_files:
+  - src/app.py
+problem: undocumented
+motivation: "Introduce capability described in commit messages."
+solution: "Changes observed in: src/app.py"
