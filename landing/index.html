@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('skald-landing-theme');
+          if (t === 'light' || t === 'dark') {
+            document.documentElement.dataset.theme = t;
+            document.documentElement.classList.toggle('dark', t === 'dark');
+            document.documentElement.classList.toggle('light', t === 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skald — Local-first developer knowledge pipeline</title>
+    <meta
+      name="description"
+      content="Skald turns Git engineering activity into structured feature metadata and grounded content drafts. Local-first CLI for Python 3.10+."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="%BASE_URL%favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
